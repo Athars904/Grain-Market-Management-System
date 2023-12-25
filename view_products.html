@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>View Products</title>
+    <!-- Add your CSS styles -->
+</head>
+
+<body>
+    <h1>View Products</h1>
+
+    <div id="productsGrid">
+        <!-- Display products here -->
+    </div>
+
+    <script>
+        // Fetch products from the server
+        fetch('http://localhost:3000/products')
+            .then(response => response.json())
+            .then(products => {
+                const productsGrid = document.getElementById('productsGrid');
+                products.forEach(product => {
+                    const productDiv = document.createElement('div');
+                    productDiv.textContent = `Product ID: ${product.ProductID}, Name: ${product.ProductName}, Quantity: ${product.AvailableQuantity}, Price: ${product.PricePerUnit}`;
+                    productsGrid.appendChild(productDiv);
+                });
+            })
+            .catch(error => console.error('Error fetching products:', error));
+    </script>
+</body>
+
+</html>

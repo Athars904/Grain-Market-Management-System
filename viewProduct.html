@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>View Product</title>
+</head>
+
+<body>
+    <h1>Product</h1>
+    <ul id="productList"></ul>
+
+    <script>
+        // Fetch data from the API and display it
+        fetch('/api/product')
+            .then(response => response.json())
+            .then(product => {
+                const list = document.getElementById('productList');
+                product.forEach(item => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = item.YourColumnName; // Replace with your column name
+                    list.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+
+</html>

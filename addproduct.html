@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Submit Product Data</title>
+</head>
+
+<body>
+    <h1>Enter Product Details</h1>
+    <form action="/submit-product" method="post">
+        <label for="productID">Product ID:</label><br>
+        <input type="text" id="productID" name="productID"><br>
+
+        <label for="productName">Product Name:</label><br>
+        <input type="text" id="productName" name="productName"><br>
+
+        <label for="availableQuantity">Available Quantity:</label><br>
+        <input type="number" id="availableQuantity" name="availableQuantity"><br>
+
+        <label for="pricePerUnit">Price Per Unit:</label><br>
+        <input type="text" id="pricePerUnit" name="pricePerUnit"><br>
+
+        <label for="supplierID">Supplier ID:</label><br>
+        <input type="text" id="supplierID" name="supplierID"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

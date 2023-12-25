@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add Transaction</title>
+    <meta name="description" content="Add Transaction">
+    <meta name="author" content="Your Name">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="addTransaction.css">
+</head>
+
+<body>
+    <div id="add-transaction">
+        <h1>Add Transaction</h1>
+        <form id="transaction-form">
+            <label for="transactionID">Transaction ID:</label>
+            <input type="text" id="transactionID" name="transactionID" required><br><br>
+
+            <label for="productID">Product ID:</label>
+            <input type="text" id="productID" name="productID" required><br><br>
+
+            <label for="investorID">Investor ID:</label>
+            <input type="text" id="investorID" name="investorID" required><br><br>
+
+            <label for="quantitySold">Quantity Sold:</label>
+            <input type="number" id="quantitySold" name="quantitySold" required><br><br>
+
+            <label for="saleAmount">Sale Amount:</label>
+            <input type="number" id="saleAmount" name="saleAmount" required><br><br>
+
+            <input type="submit" value="Add Transaction">
+        </form>
+                <button id="goToMenuBtn">Go Back to Menu</button>
+    <script src="backtomenu.js" defer></script>
+    </div>
+</body>
+
+</html>
